@@ -1,0 +1,21 @@
+﻿@model IEnumerable<DoNetDuds.Models.Category>
+<h1> please choose Product category</h1>
+<ul>
+    @foreach(var category in Model)
+    {
+        <li>
+    <a asp-controller="Categories" asp-action="Browse" asp-route-category="@category.Name"> @category.Name</a>
+</li>
+    }
+    <l1>
+        <a asp-controller="Categories" asp-action="Browse" asp-route-category="Category1">Category1</a>
+    </l1>
+    <li>
+        <a asp-controller="Categories" asp-action="Browse"asp-route-category="Category2">Category2</a>
+        
+    </li>
+    <li>
+        <a asp-controller="Categories" asp-action="Browse"asp-route-category="Category3">Category3</a>
+       
+    </li>
+</ul>
